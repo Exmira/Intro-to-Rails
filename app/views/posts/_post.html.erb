@@ -1,4 +1,7 @@
+<%# if post.user_id == current_user.id %>
 <div id="<%= dom_id post %>">
+
+
   <h2>
 
     <%= post.title %>
@@ -8,5 +11,9 @@
     <strong></strong>
     <%= post.body %>
   </p>
-
+  <p>
+    <strong>Made by</strong>
+    <%= post.user.user_name %>
+  </p>
 </div>
+<%# end %>
